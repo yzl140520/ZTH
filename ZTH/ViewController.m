@@ -39,14 +39,6 @@
 
 @property (strong, nonatomic) ZTHPayActionSheet* payActionSheet;
 /*
- *
- */
-@property (assign,nonatomic) NSInteger num;
-/*
- * name
- */
-@property (strong,nonatomic) ZTHPerson* person;
-/*
  * <#name#>
  */
 @property (strong,nonatomic) ZTHListMenu* menu;
@@ -202,9 +194,6 @@
     };
     self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,nil];
 }
-- (void)setNum:(NSInteger)num{
-    _num = num;
-}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     
@@ -296,10 +285,6 @@
         block();
     }
 }
-//- (NSAttributedString*)actionSheet:(ZTHPayActionSheet*)actionSheet
-//        attributeTitleForIndexPath:(NSIndexPath*)indexPath{
-//
-//}
 
 #pragma mark - setter & getter 
 

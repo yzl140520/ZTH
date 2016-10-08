@@ -17,7 +17,6 @@
 		170531681D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531651D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m */; };
 		170531691D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531671D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m */; };
 		170C748F1D7532B9002B8C58 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170C748E1D7532B9002B8C58 /* Config.xcconfig */; };
-		170C74921D756D69002B8C58 /* YZLBezierPathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 170C74911D756D69002B8C58 /* YZLBezierPathTest.m */; };
 		176965E01D0D48E30015BA27 /* ZTHNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 176965DF1D0D48E30015BA27 /* ZTHNoDataView.m */; };
 		178984DF1D767998005B4EA4 /* ZTHPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 178984DE1D767998005B4EA4 /* ZTHPopMenuView.m */; };
 		178984E21D767BD4005B4EA4 /* ZTHPopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 178984E11D767BD4005B4EA4 /* ZTHPopMenuButton.m */; };
@@ -105,8 +104,6 @@
 		170531661D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHAlbumVideoToolBar.h; sourceTree = "<group>"; };
 		170531671D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHAlbumVideoToolBar.m; sourceTree = "<group>"; };
 		170C748E1D7532B9002B8C58 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		170C74901D756D69002B8C58 /* YZLBezierPathTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLBezierPathTest.h; sourceTree = "<group>"; };
-		170C74911D756D69002B8C58 /* YZLBezierPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLBezierPathTest.m; sourceTree = "<group>"; };
 		176965DE1D0D48E30015BA27 /* ZTHNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHNoDataView.h; sourceTree = "<group>"; };
 		176965DF1D0D48E30015BA27 /* ZTHNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHNoDataView.m; sourceTree = "<group>"; };
 		178984DD1D767998005B4EA4 /* ZTHPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPopMenuView.h; sourceTree = "<group>"; };
@@ -261,8 +258,6 @@
 				1705315F1D34BDE3001E2C23 /* 所有账单 */,
 				170531501D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView */,
 				170531531D34BDB7001E2C23 /* 支付选择菜单 */,
-				170C74901D756D69002B8C58 /* YZLBezierPathTest.h */,
-				170C74911D756D69002B8C58 /* YZLBezierPathTest.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -807,7 +802,6 @@
 				17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */,
 				170531621D34BE82001E2C23 /* ZTHAllBillViewController.m in Sources */,
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
-				170C74921D756D69002B8C58 /* YZLBezierPathTest.m in Sources */,
 				1705315B1D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView.m in Sources */,
 				17E092F71D07B9DB00FE7945 /* UIColor+ZTHImage.m in Sources */,
 				178D47411D00210E008E3262 /* ZTH.xcdatamodeld in Sources */,
