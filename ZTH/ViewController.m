@@ -30,6 +30,8 @@
 #import "ZTHPopMenuView.h"
 #import "ZTHPopMenuItemInfo.h"
 #import "RLNoDataShowVC.h"
+#import "RLJellyAnimationView.h"
+#import "RLJellyAnimationShowVC.h"
 
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -122,7 +124,7 @@
 }
 
 - (void)initData{
-    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu", nil];
+    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu",@"RLJellyAnimationView", nil];
     
     
     void(^block1)(void) = ^{
@@ -196,7 +198,12 @@
         _menu = [[ZTHListMenu alloc]initWithMenuItems:obj menuWidth:150];
         [_menu show];
     };
-    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,nil];
+    
+    void(^block5)(void) = ^{
+        RLJellyAnimationShowVC* VC = [[RLJellyAnimationShowVC alloc]init];
+        [self.navigationController pushViewController:VC animated:YES];
+    };
+    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{

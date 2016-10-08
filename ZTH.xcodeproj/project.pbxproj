@@ -32,6 +32,8 @@
 		178D475C1D00210E008E3262 /* ZTHUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D475B1D00210E008E3262 /* ZTHUITests.m */; };
 		17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */; };
 		17B85DA71DA8DE8C00E780DF /* RLNoDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */; };
+		17B85DAB1DA8E1FA00E780DF /* RLJellyAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */; };
+		17B85DAE1DA8E29A00E780DF /* RLJellyAnimationShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */; };
 		17C056731D06946700CF1F87 /* ZTHConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056721D06946700CF1F87 /* ZTHConstDefine.m */; };
 		17C056761D069A3100CF1F87 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C056751D069A3100CF1F87 /* CoreTelephony.framework */; };
 		17C0567F1D069B4600CF1F87 /* ZTHSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056781D069B4600CF1F87 /* ZTHSandbox.m */; };
@@ -133,6 +135,10 @@
 		17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+noDataDefaultView.m"; sourceTree = "<group>"; };
 		17B85DA51DA8DE8C00E780DF /* RLNoDataShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLNoDataShowVC.h; sourceTree = "<group>"; };
 		17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLNoDataShowVC.m; sourceTree = "<group>"; };
+		17B85DA91DA8E1FA00E780DF /* RLJellyAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationView.h; sourceTree = "<group>"; };
+		17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationView.m; sourceTree = "<group>"; };
+		17B85DAC1DA8E29A00E780DF /* RLJellyAnimationShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationShowVC.h; sourceTree = "<group>"; };
+		17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationShowVC.m; sourceTree = "<group>"; };
 		17C0561E1D0675CC00CF1F87 /* ZTHSystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHSystemMacro.h; sourceTree = "<group>"; };
 		17C0561F1D06765A00CF1F87 /* ZTHPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPch.pch; sourceTree = "<group>"; };
 		17C0566C1D067A1900CF1F87 /* ZTHProtocolMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHProtocolMacroDefine.h; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 			children = (
 				17B85DA41DA8DE5100E780DF /* vc */,
 				178984D91D767873005B4EA4 /* albumMenu */,
+				17B85DA81DA8E1FA00E780DF /* YZLJellyAnimationView */,
 				17F720561D61AF9300734880 /* 文字按钮界面 */,
 				17F7E8D11D616A79009E22AD /* listMenu */,
 				170305151D58216D004DA476 /* test */,
@@ -446,8 +453,19 @@
 			children = (
 				17B85DA51DA8DE8C00E780DF /* RLNoDataShowVC.h */,
 				17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */,
+				17B85DAC1DA8E29A00E780DF /* RLJellyAnimationShowVC.h */,
+				17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */,
 			);
 			path = vc;
+			sourceTree = "<group>";
+		};
+		17B85DA81DA8E1FA00E780DF /* YZLJellyAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				17B85DA91DA8E1FA00E780DF /* RLJellyAnimationView.h */,
+				17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */,
+			);
+			path = YZLJellyAnimationView;
 			sourceTree = "<group>";
 		};
 		17C0561A1D066FEA00CF1F87 /* Common */ = {
@@ -797,9 +815,11 @@
 				1705315E1D34BDB7001E2C23 /* ZTHPaySheetTitleView.m in Sources */,
 				178984E81D76AFFE005B4EA4 /* UIColor+ImageGetColor.m in Sources */,
 				176965E01D0D48E30015BA27 /* ZTHNoDataView.m in Sources */,
+				17B85DAB1DA8E1FA00E780DF /* RLJellyAnimationView.m in Sources */,
 				17F7204F1D61AEF700734880 /* NSString+Category.m in Sources */,
 				17F7E8D41D616A99009E22AD /* ZTHListMenu.m in Sources */,
 				178D47381D00210E008E3262 /* AppDelegate.m in Sources */,
+				17B85DAE1DA8E29A00E780DF /* RLJellyAnimationShowVC.m in Sources */,
 				17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */,
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
 				1705315B1D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView.m in Sources */,
