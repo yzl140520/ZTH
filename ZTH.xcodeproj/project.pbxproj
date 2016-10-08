@@ -32,6 +32,7 @@
 		178D47461D00210E008E3262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178D47441D00210E008E3262 /* LaunchScreen.storyboard */; };
 		178D47511D00210E008E3262 /* ZTHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D47501D00210E008E3262 /* ZTHTests.m */; };
 		178D475C1D00210E008E3262 /* ZTHUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D475B1D00210E008E3262 /* ZTHUITests.m */; };
+		17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */; };
 		17C056731D06946700CF1F87 /* ZTHConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056721D06946700CF1F87 /* ZTHConstDefine.m */; };
 		17C056761D069A3100CF1F87 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C056751D069A3100CF1F87 /* CoreTelephony.framework */; };
 		17C0567F1D069B4600CF1F87 /* ZTHSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056781D069B4600CF1F87 /* ZTHSandbox.m */; };
@@ -48,7 +49,6 @@
 		17E092F91D07B9DB00FE7945 /* UIImage+ZTHResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E092F11D07B9DB00FE7945 /* UIImage+ZTHResize.m */; };
 		17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E092FB1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m */; };
 		17E092FF1D07BA7300FE7945 /* UIImage+ZTHAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E092FE1D07BA7300FE7945 /* UIImage+ZTHAlpha.m */; };
-		17E093041D07EBD900FE7945 /* 校园预览图.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E093031D07EBD900FE7945 /* 校园预览图.png */; };
 		17F7203F1D61AE5600734880 /* NSMutableAttributedString+utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F7203E1D61AE5600734880 /* NSMutableAttributedString+utils.m */; };
 		17F7204F1D61AEF700734880 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F720421D61AEF700734880 /* NSString+Category.m */; };
 		17F720501D61AEF700734880 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F720441D61AEF700734880 /* NSString+MD5.m */; };
@@ -134,6 +134,8 @@
 		178D47571D00210E008E3262 /* ZTHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZTHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		178D475B1D00210E008E3262 /* ZTHUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHUITests.m; sourceTree = "<group>"; };
 		178D475D1D00210E008E3262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B85DA11DA8D6A800E780DF /* UITableView+noDataDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+noDataDefaultView.h"; sourceTree = "<group>"; };
+		17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+noDataDefaultView.m"; sourceTree = "<group>"; };
 		17C0561E1D0675CC00CF1F87 /* ZTHSystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHSystemMacro.h; sourceTree = "<group>"; };
 		17C0561F1D06765A00CF1F87 /* ZTHPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPch.pch; sourceTree = "<group>"; };
 		17C0566C1D067A1900CF1F87 /* ZTHProtocolMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHProtocolMacroDefine.h; sourceTree = "<group>"; };
@@ -172,7 +174,6 @@
 		17E092FB1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZTHRoundCorner.m"; sourceTree = "<group>"; };
 		17E092FD1D07BA7300FE7945 /* UIImage+ZTHAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZTHAlpha.h"; sourceTree = "<group>"; };
 		17E092FE1D07BA7300FE7945 /* UIImage+ZTHAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZTHAlpha.m"; sourceTree = "<group>"; };
-		17E093031D07EBD900FE7945 /* 校园预览图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "校园预览图.png"; path = "../../../项目相关/ZhangTongHome/设计文档/界面设计/掌通家园园丁版效果图/2.5.0/1-5/校园预览图.png"; sourceTree = "<group>"; };
 		17F7203D1D61AE5600734880 /* NSMutableAttributedString+utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+utils.h"; sourceTree = "<group>"; };
 		17F7203E1D61AE5600734880 /* NSMutableAttributedString+utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+utils.m"; sourceTree = "<group>"; };
 		17F720411D61AEF700734880 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
@@ -343,7 +344,6 @@
 			children = (
 				170C748E1D7532B9002B8C58 /* Config.xcconfig */,
 				17F7E8DB1D618C9B009E22AD /* images */,
-				17E093031D07EBD900FE7945 /* 校园预览图.png */,
 				178D47321D00210E008E3262 /* ZTH */,
 				178D474F1D00210E008E3262 /* ZTHTests */,
 				178D475A1D00210E008E3262 /* ZTHUITests */,
@@ -415,6 +415,7 @@
 		178D47691D002427008E3262 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				17B85DA01DA8D6A800E780DF /* UITableView */,
 				17F720401D61AEF700734880 /* NSStringCategories */,
 				17F7203C1D61AE5600734880 /* NSMutableAttributeString */,
 				17E092DE1D07B9DB00FE7945 /* NSDateCategories */,
@@ -443,6 +444,15 @@
 				17C056911D06D58200CF1F87 /* ZTHDateFormatterFactory.m */,
 			);
 			path = interface;
+			sourceTree = "<group>";
+		};
+		17B85DA01DA8D6A800E780DF /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				17B85DA11DA8D6A800E780DF /* UITableView+noDataDefaultView.h */,
+				17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		17C0561A1D066FEA00CF1F87 /* Common */ = {
@@ -677,7 +687,6 @@
 			files = (
 				178D47461D00210E008E3262 /* LaunchScreen.storyboard in Resources */,
 				17F7E8E41D618C9B009E22AD /* right_menu_multichat@3x.png in Resources */,
-				17E093041D07EBD900FE7945 /* 校园预览图.png in Resources */,
 				170C748F1D7532B9002B8C58 /* Config.xcconfig in Resources */,
 				17F7E8E51D618C9B009E22AD /* right_menu_payMoney@3x.png in Resources */,
 				17F7E8E31D618C9B009E22AD /* right_menu_facetoface@3x.png in Resources */,
@@ -795,6 +804,7 @@
 				17F7204F1D61AEF700734880 /* NSString+Category.m in Sources */,
 				17F7E8D41D616A99009E22AD /* ZTHListMenu.m in Sources */,
 				178D47381D00210E008E3262 /* AppDelegate.m in Sources */,
+				17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */,
 				170531621D34BE82001E2C23 /* ZTHAllBillViewController.m in Sources */,
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
 				170C74921D756D69002B8C58 /* YZLBezierPathTest.m in Sources */,

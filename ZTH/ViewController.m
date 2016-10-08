@@ -31,7 +31,7 @@
 #import "ZTHPopMenuItemInfo.h"
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
-@interface ViewController ()<ZTHPayActionSheetDelegate>
+@interface ViewController ()<ZTHPayActionSheetDelegate,UITableViewDataSource,UITableViewDelegate>
 /*
  * 视频播放界面
  */
@@ -54,6 +54,18 @@
  * name
  */
 @property (strong,nonatomic) ZTHPopMenuView* popMenu;
+/*
+ * name
+ */
+@property (strong,nonatomic) UITableView* tableView;
+/*
+ * 数据源
+ */
+@property (strong,nonatomic) NSMutableArray* dataSource;
+/*
+ * 行为
+ */
+@property (strong,nonatomic) NSMutableArray* actions;
 @end
 
 @implementation ViewController
@@ -66,23 +78,12 @@
 //    [_person addObserver:self forKeyPath:@"persons" options:NSKeyValueObservingOptionNew context:nil];
 //    
 //    [_person addObject:@"ddd"];
-    UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(10, 300, 150, 30)];
-    button.backgroundColor = [UIColor redColor];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(10, 300, 150, 30)];
+//    button.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:button];
+//    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
 //
-//    NSMutableArray *obj = [NSMutableArray array];
-//    
-//    for (NSInteger i = 0; i < [self titles].count; i++) {
-//        
-//        ZTHListMenuItemInfo * info = [ZTHListMenuItemInfo new];
-//        info.imageName = [self images][i];
-//        info.title = [self titles][i];
-//        [obj addObject:info];
-//    }
-//    
-//    _menu = [[ZTHListMenu alloc]initWithMenuItems:obj menuWidth:150];
-//    
+//
 //    ZTHNoDataView* noDataView = [ZTHNoDataView noDataViewWithFrame:CGRectMake(0, 0, 320, 250) image:nil message:@"您还没加入任何学校\n加入学校或联系园长/当地服务商加入，体验更精彩" detailMessage:nil buttonTitle:@"立即添加" buttonActionBlock:^{
 //        
 //    }];
@@ -100,22 +101,107 @@
 //    [noDataView setMessageColor:[UIColor whiteColor]];
 //    [self.view addSubview:noDataView2];
     
-    NSDate* date = [NSDate date];
-    BOOL istoday = [date zth_isToday];
-    NSString* string = [date formateForSpecialTwo];
-//
-     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-//    dateFormatter.locale = [NSLocale systemLocale];
-//    dateFormatter.calendar = gregorian;
-    NSString* dateString = @"2016-06-25 15:20:35";
-    NSDate* date2 = [dateFormatter dateFromString:dateString];
-    NSString* string21 = [dateFormatter stringFromDate:date2];
-    
+//    NSDate* date = [NSDate date];
+//    BOOL istoday = [date zth_isToday];
+//    NSString* string = [date formateForSpecialTwo];
+////
+//     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+//     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+//    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+////    dateFormatter.locale = [NSLocale systemLocale];
+////    dateFormatter.calendar = gregorian;
+//    NSString* dateString = @"2016-06-25 15:20:35";
+//    NSDate* date2 = [dateFormatter dateFromString:dateString];
+//    NSString* string21 = [dateFormatter stringFromDate:date2];
+    [self initData];
+    [self initUI];
    
 }
 
+
+- (void)initUI{
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsZero);
+    }];
+}
+
+- (void)initData{
+    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu", nil];
+    
+    
+    void(^block1)(void) = ^{
+    
+    };
+    
+    void(^block2)(void) = ^{
+        self.payActionSheet.curSelIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.payActionSheet showInView:self.view];
+
+    };
+    void(^block3)(void) = ^{
+        NSMutableArray* items = [[NSMutableArray alloc]init];
+        ZTHPopMenuItemInfo* itemInfo1 = [[ZTHPopMenuItemInfo alloc]init];
+        itemInfo1.imageName = @"album_menu_icon_camera_selected";
+        itemInfo1.title = @"拍照";
+        
+        ZTHPopMenuItemInfo* itemInfo2 = [[ZTHPopMenuItemInfo alloc]init];
+        itemInfo2.imageName = @"album_menu_icon_photo_selected";
+        itemInfo2.title = @"相册";
+        
+        ZTHPopMenuItemInfo* itemInfo3 = [[ZTHPopMenuItemInfo alloc]init];
+        itemInfo3.imageName = @"album_menu_icon_video_selected";
+        itemInfo3.title = @"视频";
+        
+        ZTHPopMenuItemInfo* itemInfo4 = [[ZTHPopMenuItemInfo alloc]init];
+        itemInfo4.imageName = @"album_menu_icon_text_selected";
+        itemInfo4.title = @"文字";
+        
+        ZTHPopMenuItemInfo* itemInfo5 = [[ZTHPopMenuItemInfo alloc]init];
+        itemInfo5.imageName = @"album_menu_icon_growth_selected";
+        itemInfo5.title = @"身高体重";
+        
+
+        
+        [items addObject:itemInfo1];
+        [items addObject:itemInfo2];
+        [items addObject:itemInfo3];
+        
+        [items addObject:itemInfo4];
+        
+        [items addObject:itemInfo5];
+        
+        //    [items addObject:itemInfo1];
+        
+        if (!self.popMenu) {
+            self.popMenu = [[ZTHPopMenuView alloc]initWithMenuItems:items buttonAction:^(NSInteger buttonIndex) {
+                
+            }];
+        }
+        
+        
+        
+        [self.popMenu show];
+
+        
+    };
+    
+    void(^block4)(void) = ^{
+        NSMutableArray *obj = [NSMutableArray array];
+        
+        for (NSInteger i = 0; i < [self titles].count; i++) {
+            
+            ZTHListMenuItemInfo * info = [ZTHListMenuItemInfo new];
+            info.imageName = [self images][i];
+            info.title = [self titles][i];
+            [obj addObject:info];
+        }
+        
+        _menu = [[ZTHListMenu alloc]initWithMenuItems:obj menuWidth:150];
+        [_menu show];
+    };
+    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,nil];
+}
 - (void)setNum:(NSInteger)num{
     _num = num;
 }
@@ -124,60 +210,6 @@
     
 }
 
-- (void)buttonAction:(UIButton*)sender{
-//    self.payActionSheet.curSelIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.payActionSheet showInView:self.view];
-//    [self.menu show];
-//    NSString* identity = @"com.szy.seebabyyd.test";//[ZTHSystemInfo appIdentifier];
-//    NSString* urlString = [NSString stringWithFormat:@"prefs:root=%@",identity];
-//    NSURL * url = [NSURL URLWithString:urlString];
-//    [[UIApplication sharedApplication]openURL:url];
-    
-    NSMutableArray* items = [[NSMutableArray alloc]init];
-    ZTHPopMenuItemInfo* itemInfo1 = [[ZTHPopMenuItemInfo alloc]init];
-    itemInfo1.imageName = @"album_menu_icon_camera_selected";
-    itemInfo1.title = @"拍照";
-    
-    ZTHPopMenuItemInfo* itemInfo2 = [[ZTHPopMenuItemInfo alloc]init];
-    itemInfo2.imageName = @"album_menu_icon_photo_selected";
-    itemInfo2.title = @"相册";
-    
-    ZTHPopMenuItemInfo* itemInfo3 = [[ZTHPopMenuItemInfo alloc]init];
-    itemInfo3.imageName = @"album_menu_icon_video_selected";
-    itemInfo3.title = @"视频";
-    
-    ZTHPopMenuItemInfo* itemInfo4 = [[ZTHPopMenuItemInfo alloc]init];
-    itemInfo4.imageName = @"album_menu_icon_text_selected";
-    itemInfo4.title = @"文字";
-    
-    ZTHPopMenuItemInfo* itemInfo5 = [[ZTHPopMenuItemInfo alloc]init];
-    itemInfo5.imageName = @"album_menu_icon_growth_selected";
-    itemInfo5.title = @"身高体重";
-    
-//    ZTHPopMenuItemInfo* itemInfo1 = [[ZTHPopMenuItemInfo alloc]init];
-//    itemInfo1.imageName = @"album_menu_icon_camera_selected";
-//    itemInfo1.title = @"拍照";
-    
-    [items addObject:itemInfo1];
-    [items addObject:itemInfo2];
-    [items addObject:itemInfo3];
-    
-    [items addObject:itemInfo4];
-    
-    [items addObject:itemInfo5];
-    
-//    [items addObject:itemInfo1];
-    
-    if (!self.popMenu) {
-        self.popMenu = [[ZTHPopMenuView alloc]initWithMenuItems:items buttonAction:^(NSInteger buttonIndex) {
-            
-        }];
-    }
-    
-    
-
-    [self.popMenu show];
-}
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     NSString* string1 = @"http://zthome.qiniudn.com/MInbuebVdR9HBibfxHcouSuqYAs=/FhMZcJUZNahLQiHCektbdi-E-_xm";
@@ -242,6 +274,28 @@
     }
     return nil;
 }
+
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.font = fontWithSize(17);
+    cell.textLabel.text = [self.dataSource objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    void(^block)(void) = [self.actions objectAtIndex:indexPath.row];
+    if (block) {
+        block();
+    }
+}
 //- (NSAttributedString*)actionSheet:(ZTHPayActionSheet*)actionSheet
 //        attributeTitleForIndexPath:(NSIndexPath*)indexPath{
 //
@@ -265,13 +319,23 @@
     }
     return _payActionSheet;
 }
-#pragma mark - method
 
-- (void)initUI{
-    [self.view addSubview:self.videoPlayView];
-    
-   
+- (UITableView*)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectZero];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
+
+- (NSMutableArray*)dataSource{
+    if (!_dataSource) {
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
+}
+#pragma mark - method
 
 - (NSArray *) titles {
     return @[@"扫一扫",

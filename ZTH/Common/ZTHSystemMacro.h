@@ -92,4 +92,7 @@ return shared##className; \
 
 #define UISCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define UISCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
+#define kCustomFontName          @"Heiti SC"  //HYQiHei-EZJ， PingFang_SC_Regular  PingFangSC-Regular
+#define fontWithSize(v)         [UIFont fontWithName:kCustomFontName size:v] //oldHelvetica
 #endif /* ZTHSystemMicro_h */
