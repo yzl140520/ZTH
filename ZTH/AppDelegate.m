@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ViewController* vc = [[ViewController alloc]init];
+    UINavigationController* root = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, UISCREEN_WIDTH, UISCREEN_HEIGHT)];
+    self.window.rootViewController = root;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

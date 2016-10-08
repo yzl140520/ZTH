@@ -13,7 +13,6 @@
 		1705315C1D34BDB7001E2C23 /* ZTHPaySheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531561D34BDB7001E2C23 /* ZTHPaySheetCell.m */; };
 		1705315D1D34BDB7001E2C23 /* ZTHPayActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531581D34BDB7001E2C23 /* ZTHPayActionSheet.m */; };
 		1705315E1D34BDB7001E2C23 /* ZTHPaySheetTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1705315A1D34BDB7001E2C23 /* ZTHPaySheetTitleView.m */; };
-		170531621D34BE82001E2C23 /* ZTHAllBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531611D34BE82001E2C23 /* ZTHAllBillViewController.m */; };
 		170531681D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531651D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m */; };
 		170531691D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 170531671D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m */; };
 		170C748F1D7532B9002B8C58 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170C748E1D7532B9002B8C58 /* Config.xcconfig */; };
@@ -32,6 +31,7 @@
 		178D47511D00210E008E3262 /* ZTHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D47501D00210E008E3262 /* ZTHTests.m */; };
 		178D475C1D00210E008E3262 /* ZTHUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178D475B1D00210E008E3262 /* ZTHUITests.m */; };
 		17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */; };
+		17B85DA71DA8DE8C00E780DF /* RLNoDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */; };
 		17C056731D06946700CF1F87 /* ZTHConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056721D06946700CF1F87 /* ZTHConstDefine.m */; };
 		17C056761D069A3100CF1F87 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C056751D069A3100CF1F87 /* CoreTelephony.framework */; };
 		17C0567F1D069B4600CF1F87 /* ZTHSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056781D069B4600CF1F87 /* ZTHSandbox.m */; };
@@ -97,8 +97,6 @@
 		170531581D34BDB7001E2C23 /* ZTHPayActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHPayActionSheet.m; sourceTree = "<group>"; };
 		170531591D34BDB7001E2C23 /* ZTHPaySheetTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPaySheetTitleView.h; sourceTree = "<group>"; };
 		1705315A1D34BDB7001E2C23 /* ZTHPaySheetTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHPaySheetTitleView.m; sourceTree = "<group>"; };
-		170531601D34BE82001E2C23 /* ZTHAllBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHAllBillViewController.h; sourceTree = "<group>"; };
-		170531611D34BE82001E2C23 /* ZTHAllBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHAllBillViewController.m; sourceTree = "<group>"; };
 		170531641D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHAlbumVideoPlayView.h; sourceTree = "<group>"; };
 		170531651D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTHAlbumVideoPlayView.m; sourceTree = "<group>"; };
 		170531661D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHAlbumVideoToolBar.h; sourceTree = "<group>"; };
@@ -133,6 +131,8 @@
 		178D475D1D00210E008E3262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B85DA11DA8D6A800E780DF /* UITableView+noDataDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+noDataDefaultView.h"; sourceTree = "<group>"; };
 		17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+noDataDefaultView.m"; sourceTree = "<group>"; };
+		17B85DA51DA8DE8C00E780DF /* RLNoDataShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLNoDataShowVC.h; sourceTree = "<group>"; };
+		17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLNoDataShowVC.m; sourceTree = "<group>"; };
 		17C0561E1D0675CC00CF1F87 /* ZTHSystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHSystemMacro.h; sourceTree = "<group>"; };
 		17C0561F1D06765A00CF1F87 /* ZTHPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPch.pch; sourceTree = "<group>"; };
 		17C0566C1D067A1900CF1F87 /* ZTHProtocolMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHProtocolMacroDefine.h; sourceTree = "<group>"; };
@@ -250,12 +250,12 @@
 		1705314F1D34BDB7001E2C23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				17B85DA41DA8DE5100E780DF /* vc */,
 				178984D91D767873005B4EA4 /* albumMenu */,
 				17F720561D61AF9300734880 /* 文字按钮界面 */,
 				17F7E8D11D616A79009E22AD /* listMenu */,
 				170305151D58216D004DA476 /* test */,
 				170531631D34BF5A001E2C23 /* 视频播放界面 */,
-				1705315F1D34BDE3001E2C23 /* 所有账单 */,
 				170531501D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView */,
 				170531531D34BDB7001E2C23 /* 支付选择菜单 */,
 			);
@@ -290,15 +290,6 @@
 				170531561D34BDB7001E2C23 /* ZTHPaySheetCell.m */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		1705315F1D34BDE3001E2C23 /* 所有账单 */ = {
-			isa = PBXGroup;
-			children = (
-				170531601D34BE82001E2C23 /* ZTHAllBillViewController.h */,
-				170531611D34BE82001E2C23 /* ZTHAllBillViewController.m */,
-			);
-			path = "所有账单";
 			sourceTree = "<group>";
 		};
 		170531631D34BF5A001E2C23 /* 视频播放界面 */ = {
@@ -448,6 +439,15 @@
 				17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		17B85DA41DA8DE5100E780DF /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				17B85DA51DA8DE8C00E780DF /* RLNoDataShowVC.h */,
+				17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */,
+			);
+			path = vc;
 			sourceTree = "<group>";
 		};
 		17C0561A1D066FEA00CF1F87 /* Common */ = {
@@ -788,6 +788,7 @@
 				17C056801D069B4600CF1F87 /* ZTHSystemInfo.m in Sources */,
 				17F720551D61AEF700734880 /* NSString+ZTHUtils.m in Sources */,
 				17C056821D069B4600CF1F87 /* ZTHVersion.m in Sources */,
+				17B85DA71DA8DE8C00E780DF /* RLNoDataShowVC.m in Sources */,
 				17E092F81D07B9DB00FE7945 /* UIImage+ImageEffects.m in Sources */,
 				17E092F91D07B9DB00FE7945 /* UIImage+ZTHResize.m in Sources */,
 				178D473B1D00210E008E3262 /* ViewController.m in Sources */,
@@ -800,7 +801,6 @@
 				17F7E8D41D616A99009E22AD /* ZTHListMenu.m in Sources */,
 				178D47381D00210E008E3262 /* AppDelegate.m in Sources */,
 				17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */,
-				170531621D34BE82001E2C23 /* ZTHAllBillViewController.m in Sources */,
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
 				1705315B1D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView.m in Sources */,
 				17E092F71D07B9DB00FE7945 /* UIColor+ZTHImage.m in Sources */,

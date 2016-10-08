@@ -29,6 +29,9 @@
 #import "UIColor+ZTHImage.h"
 #import "ZTHPopMenuView.h"
 #import "ZTHPopMenuItemInfo.h"
+#import "RLNoDataShowVC.h"
+
+
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 @interface ViewController ()<ZTHPayActionSheetDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -123,7 +126,8 @@
     
     
     void(^block1)(void) = ^{
-    
+        RLNoDataShowVC* vc = [[RLNoDataShowVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     };
     
     void(^block2)(void) = ^{
@@ -201,9 +205,9 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSString* string1 = @"http://zthome.qiniudn.com/MInbuebVdR9HBibfxHcouSuqYAs=/FhMZcJUZNahLQiHCektbdi-E-_xm";
-    NSURL* url = [NSURL URLWithString:string1];//[NSURL URLWithString:@"http://zthome.qiniudn.com/MInbuebVdR9HBibfxHcouSuqYAs=/lpSSlZ0gd0BBtbr0h8IN_dynvBL5"];
-    self.videoPlayView.url = url;
+//    NSString* string1 = @"http://zthome.qiniudn.com/MInbuebVdR9HBibfxHcouSuqYAs=/FhMZcJUZNahLQiHCektbdi-E-_xm";
+//    NSURL* url = [NSURL URLWithString:string1];//[NSURL URLWithString:@"http://zthome.qiniudn.com/MInbuebVdR9HBibfxHcouSuqYAs=/lpSSlZ0gd0BBtbr0h8IN_dynvBL5"];
+//    self.videoPlayView.url = url;
 
 }
 
