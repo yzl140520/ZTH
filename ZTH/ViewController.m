@@ -33,6 +33,7 @@
 #import "RLJellyAnimationView.h"
 #import "RLJellyAnimationVC.h"
 #import "RLCircleProgressVC.h"
+#import "ZTHPhoneMenu.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -83,7 +84,7 @@
 }
 
 - (void)initData{
-    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu",@"RLJellyAnimationView",@"RLCircleProgressView", nil];
+    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu",@"RLJellyAnimationView",@"RLCircleProgressView",@"ZTHPhoneMenu", nil];
     
     
     void(^block1)(void) = ^{
@@ -167,7 +168,12 @@
         RLCircleProgressVC* vc = [[RLCircleProgressVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     };
-    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,block6,nil];
+    
+    void(^block7)(void) = ^{
+        ZTHPhoneMenu* phoneMenu = [[ZTHPhoneMenu alloc]init];
+        [phoneMenu showInController:self phoneNumber:@"18056987456"];
+    };
+    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,block6,block7,nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
