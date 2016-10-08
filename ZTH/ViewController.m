@@ -31,7 +31,7 @@
 #import "ZTHPopMenuItemInfo.h"
 #import "RLNoDataShowVC.h"
 #import "RLJellyAnimationView.h"
-#import "RLJellyAnimationShowVC.h"
+#import "RLJellyAnimationVC.h"
 
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -200,7 +200,7 @@
     };
     
     void(^block5)(void) = ^{
-        RLJellyAnimationShowVC* VC = [[RLJellyAnimationShowVC alloc]init];
+        RLJellyAnimationVC* VC = [[RLJellyAnimationVC alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     };
     self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,nil];

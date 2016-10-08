@@ -1,5 +1,5 @@
 //
-//  RLJellyAnimationShowVC.h
+//  RLJellyAnimationVC.h
 //  ZTH
 //
 //  Created by yzl on 16/10/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RLJellyAnimationShowVC : UITableViewController
+@interface RLJellyAnimationVC : UIViewController
 
 @end

@@ -33,7 +33,7 @@
 		17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA21DA8D6A800E780DF /* UITableView+noDataDefaultView.m */; };
 		17B85DA71DA8DE8C00E780DF /* RLNoDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */; };
 		17B85DAB1DA8E1FA00E780DF /* RLJellyAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */; };
-		17B85DAE1DA8E29A00E780DF /* RLJellyAnimationShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */; };
+		17B85DB11DA8E43D00E780DF /* RLJellyAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */; };
 		17C056731D06946700CF1F87 /* ZTHConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056721D06946700CF1F87 /* ZTHConstDefine.m */; };
 		17C056761D069A3100CF1F87 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C056751D069A3100CF1F87 /* CoreTelephony.framework */; };
 		17C0567F1D069B4600CF1F87 /* ZTHSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056781D069B4600CF1F87 /* ZTHSandbox.m */; };
@@ -137,8 +137,8 @@
 		17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLNoDataShowVC.m; sourceTree = "<group>"; };
 		17B85DA91DA8E1FA00E780DF /* RLJellyAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationView.h; sourceTree = "<group>"; };
 		17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationView.m; sourceTree = "<group>"; };
-		17B85DAC1DA8E29A00E780DF /* RLJellyAnimationShowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationShowVC.h; sourceTree = "<group>"; };
-		17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationShowVC.m; sourceTree = "<group>"; };
+		17B85DAF1DA8E43D00E780DF /* RLJellyAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationVC.h; sourceTree = "<group>"; };
+		17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationVC.m; sourceTree = "<group>"; };
 		17C0561E1D0675CC00CF1F87 /* ZTHSystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHSystemMacro.h; sourceTree = "<group>"; };
 		17C0561F1D06765A00CF1F87 /* ZTHPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPch.pch; sourceTree = "<group>"; };
 		17C0566C1D067A1900CF1F87 /* ZTHProtocolMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHProtocolMacroDefine.h; sourceTree = "<group>"; };
@@ -453,8 +453,8 @@
 			children = (
 				17B85DA51DA8DE8C00E780DF /* RLNoDataShowVC.h */,
 				17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */,
-				17B85DAC1DA8E29A00E780DF /* RLJellyAnimationShowVC.h */,
-				17B85DAD1DA8E29A00E780DF /* RLJellyAnimationShowVC.m */,
+				17B85DAF1DA8E43D00E780DF /* RLJellyAnimationVC.h */,
+				17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -791,6 +791,7 @@
 				170531691D34BF5A001E2C23 /* ZTHAlbumVideoToolBar.m in Sources */,
 				17F720501D61AEF700734880 /* NSString+MD5.m in Sources */,
 				17044A881D01268B00CFF95B /* ZTHPathManager.m in Sources */,
+				17B85DB11DA8E43D00E780DF /* RLJellyAnimationVC.m in Sources */,
 				17E092F31D07B9DB00FE7945 /* NSDateFormatter+ZTHFactory.m in Sources */,
 				178984E51D767BFE005B4EA4 /* ZTHPopMenuItemInfo.m in Sources */,
 				17E092FF1D07BA7300FE7945 /* UIImage+ZTHAlpha.m in Sources */,
@@ -819,7 +820,6 @@
 				17F7204F1D61AEF700734880 /* NSString+Category.m in Sources */,
 				17F7E8D41D616A99009E22AD /* ZTHListMenu.m in Sources */,
 				178D47381D00210E008E3262 /* AppDelegate.m in Sources */,
-				17B85DAE1DA8E29A00E780DF /* RLJellyAnimationShowVC.m in Sources */,
 				17B85DA31DA8D6A800E780DF /* UITableView+noDataDefaultView.m in Sources */,
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
 				1705315B1D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView.m in Sources */,
