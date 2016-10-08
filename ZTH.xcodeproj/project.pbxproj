@@ -34,6 +34,8 @@
 		17B85DA71DA8DE8C00E780DF /* RLNoDataShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */; };
 		17B85DAB1DA8E1FA00E780DF /* RLJellyAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */; };
 		17B85DB11DA8E43D00E780DF /* RLJellyAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */; };
+		17B85DB51DA8E58500E780DF /* RLCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DB41DA8E58500E780DF /* RLCircleProgressView.m */; };
+		17B85DB81DA8E5A300E780DF /* RLCircleProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B85DB71DA8E5A300E780DF /* RLCircleProgressVC.m */; };
 		17C056731D06946700CF1F87 /* ZTHConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056721D06946700CF1F87 /* ZTHConstDefine.m */; };
 		17C056761D069A3100CF1F87 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C056751D069A3100CF1F87 /* CoreTelephony.framework */; };
 		17C0567F1D069B4600CF1F87 /* ZTHSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C056781D069B4600CF1F87 /* ZTHSandbox.m */; };
@@ -139,6 +141,10 @@
 		17B85DAA1DA8E1FA00E780DF /* RLJellyAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationView.m; sourceTree = "<group>"; };
 		17B85DAF1DA8E43D00E780DF /* RLJellyAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLJellyAnimationVC.h; sourceTree = "<group>"; };
 		17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLJellyAnimationVC.m; sourceTree = "<group>"; };
+		17B85DB31DA8E58500E780DF /* RLCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCircleProgressView.h; sourceTree = "<group>"; };
+		17B85DB41DA8E58500E780DF /* RLCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCircleProgressView.m; sourceTree = "<group>"; };
+		17B85DB61DA8E5A300E780DF /* RLCircleProgressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCircleProgressVC.h; sourceTree = "<group>"; };
+		17B85DB71DA8E5A300E780DF /* RLCircleProgressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCircleProgressVC.m; sourceTree = "<group>"; };
 		17C0561E1D0675CC00CF1F87 /* ZTHSystemMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHSystemMacro.h; sourceTree = "<group>"; };
 		17C0561F1D06765A00CF1F87 /* ZTHPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHPch.pch; sourceTree = "<group>"; };
 		17C0566C1D067A1900CF1F87 /* ZTHProtocolMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTHProtocolMacroDefine.h; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				17B85DA41DA8DE5100E780DF /* vc */,
+				17B85DB21DA8E58500E780DF /* RLCircleProgressView */,
 				178984D91D767873005B4EA4 /* albumMenu */,
 				17B85DA81DA8E1FA00E780DF /* YZLJellyAnimationView */,
 				17F720561D61AF9300734880 /* 文字按钮界面 */,
@@ -455,6 +462,8 @@
 				17B85DA61DA8DE8C00E780DF /* RLNoDataShowVC.m */,
 				17B85DAF1DA8E43D00E780DF /* RLJellyAnimationVC.h */,
 				17B85DB01DA8E43D00E780DF /* RLJellyAnimationVC.m */,
+				17B85DB61DA8E5A300E780DF /* RLCircleProgressVC.h */,
+				17B85DB71DA8E5A300E780DF /* RLCircleProgressVC.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -467,6 +476,16 @@
 			);
 			path = YZLJellyAnimationView;
 			sourceTree = "<group>";
+		};
+		17B85DB21DA8E58500E780DF /* RLCircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				17B85DB31DA8E58500E780DF /* RLCircleProgressView.h */,
+				17B85DB41DA8E58500E780DF /* RLCircleProgressView.m */,
+			);
+			name = RLCircleProgressView;
+			path = ZTH/UI/RLCircleProgressView;
+			sourceTree = SOURCE_ROOT;
 		};
 		17C0561A1D066FEA00CF1F87 /* Common */ = {
 			isa = PBXGroup;
@@ -804,6 +823,7 @@
 				17C056921D06D58200CF1F87 /* ZTHDateFormatterFactory.m in Sources */,
 				170531681D34BF5A001E2C23 /* ZTHAlbumVideoPlayView.m in Sources */,
 				17C056851D069C3700CF1F87 /* ZTHUserDefaults.m in Sources */,
+				17B85DB51DA8E58500E780DF /* RLCircleProgressView.m in Sources */,
 				17C056801D069B4600CF1F87 /* ZTHSystemInfo.m in Sources */,
 				17F720551D61AEF700734880 /* NSString+ZTHUtils.m in Sources */,
 				17C056821D069B4600CF1F87 /* ZTHVersion.m in Sources */,
@@ -824,6 +844,7 @@
 				17E092FC1D07BA1000FE7945 /* UIImage+ZTHRoundCorner.m in Sources */,
 				1705315B1D34BDB7001E2C23 /* ZTHAlbumVerifySwitchView.m in Sources */,
 				17E092F71D07B9DB00FE7945 /* UIColor+ZTHImage.m in Sources */,
+				17B85DB81DA8E5A300E780DF /* RLCircleProgressVC.m in Sources */,
 				178D47411D00210E008E3262 /* ZTH.xcdatamodeld in Sources */,
 				178D47351D00210E008E3262 /* main.m in Sources */,
 			);

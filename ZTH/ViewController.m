@@ -32,7 +32,7 @@
 #import "RLNoDataShowVC.h"
 #import "RLJellyAnimationView.h"
 #import "RLJellyAnimationVC.h"
-
+#import "RLCircleProgressVC.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -69,47 +69,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor whiteColor];
-//    [self initUI];
-//    _person = [[ZTHPerson alloc]init];
-//    [_person addObserver:self forKeyPath:@"persons" options:NSKeyValueObservingOptionNew context:nil];
-//    
-//    [_person addObject:@"ddd"];
-//    UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(10, 300, 150, 30)];
-//    button.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:button];
-//    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-//
-//
-//    ZTHNoDataView* noDataView = [ZTHNoDataView noDataViewWithFrame:CGRectMake(0, 0, 320, 250) image:nil message:@"您还没加入任何学校\n加入学校或联系园长/当地服务商加入，体验更精彩" detailMessage:nil buttonTitle:@"立即添加" buttonActionBlock:^{
-//        
-//    }];
-//    noDataView.backgroundColor = [UIColor colorWithRed:0.176 green:0.651 blue:0.961 alpha:1.000];
-//    [noDataView setMessageColor:[UIColor whiteColor]];
-//    [noDataView setButtonTitleColor:[UIColor colorWithRed:0.176 green:0.651 blue:0.961 alpha:1.000] forState:UIControlStateNormal];
-//    UIImage* image = [[UIColor whiteColor]zth_image];
-//    UIImage* stretchImage = [image stretchableImageWithLeftCapWidth:0 topCapHeight:0];
-//    [noDataView setButtonBackgroundImage:stretchImage forState:UIControlStateNormal];
-//    [noDataView setButtonLayerCornerRadius:8];
-//    [noDataView setButtonFrame:CGRectMake(0, 0, 210, 45)];
-//    [self.view addSubview:noDataView];
-//    
-//    ZTHNoDataView* noDataView2 = [ZTHNoDataView noDataViewWithFrame:CGRectMake(0, CGRectGetMaxY(noDataView.frame) + 10, 320, 320) image:[UIImage imageNamed:@"classAlbum_pic2"] message:@"未关联校园的园丁登录时仅可用系统基础功能" detailMessage:nil buttonTitle:@"添加学校" buttonActionBlock:nil];
-//    [noDataView setMessageColor:[UIColor whiteColor]];
-//    [self.view addSubview:noDataView2];
-    
-//    NSDate* date = [NSDate date];
-//    BOOL istoday = [date zth_isToday];
-//    NSString* string = [date formateForSpecialTwo];
-////
-//     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-//     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-//    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-////    dateFormatter.locale = [NSLocale systemLocale];
-////    dateFormatter.calendar = gregorian;
-//    NSString* dateString = @"2016-06-25 15:20:35";
-//    NSDate* date2 = [dateFormatter dateFromString:dateString];
-//    NSString* string21 = [dateFormatter stringFromDate:date2];
     [self initData];
     [self initUI];
    
@@ -124,7 +83,7 @@
 }
 
 - (void)initData{
-    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu",@"RLJellyAnimationView", nil];
+    self.dataSource = [[NSMutableArray alloc]initWithObjects:@"列表没有数据的情况下显示默认界面",@"ZTHPayActionSheet",@"ZTHPopMenuView",@"ZTHListMenu",@"RLJellyAnimationView",@"RLCircleProgressView", nil];
     
     
     void(^block1)(void) = ^{
@@ -203,7 +162,12 @@
         RLJellyAnimationVC* VC = [[RLJellyAnimationVC alloc]init];
         [self.navigationController pushViewController:VC animated:YES];
     };
-    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,nil];
+    
+    void(^block6)(void) = ^{
+        RLCircleProgressVC* vc = [[RLCircleProgressVC alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    self.actions = [[NSMutableArray alloc]initWithObjects:block1,block2,block3,block4,block5,block6,nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
